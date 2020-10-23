@@ -1,0 +1,28 @@
+.strong {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.text-center { text-align: center;}
+
+
+.m-none {margin: 0;}
+.mb-sm { margin-bottom: .5rem;}
+.mb-md { margin-bottom: 1rem;}
+.mb-bg { margin-bottom: 2rem;}
+
+.mt-sm { margin-top: .5rem;}
+.mt-md { margin-top: 1rem;}
+.mt-bg { margin-top: 2rem;}
+
+
+.my-sm {margin: 1rem 0;}
+.my-md { margin: 2rem 0;}
+
+
+.p-sm {padding: .5rem;}
+.p-md {padding: 1rem;}
+.p-lg {padding: 2rem;}
+
+.c-white { color: $c-white;}
+.c-dark { color: $c-dark;}

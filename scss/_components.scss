@@ -1,0 +1,146 @@
+.movie {
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: $c-grey;
+    height: 17rem;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    transition: all .5s ease;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &:not(:first-of-type) {
+        margin: 2rem 0;
+    }
+
+
+    &__img {
+        width: 30%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+    }
+
+    &__price {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        background: $c-white;
+        width: 4.4rem;
+        height: 4.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+        color: $c-pink;
+        border-radius: 50%;
+    }
+}
+
+// Buttons
+
+.btn {
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border: none;
+    transition: all .2s ease;
+    cursor: pointer;
+
+    
+    &__white {
+        background-color: $c-white;
+        color: $c-pink;
+
+        &:hover {
+            background-color: $c-pink;
+            color: $c-white;
+        }
+    }
+
+    &__pink {
+        background-color: $c-pink;
+        color: $c-white;
+
+        &:hover {
+            background-color: $c-white;
+            color: $c-pink;
+        }
+    }
+
+    &__footer {
+        margin: 2rem;
+        margin-left: auto;
+        padding: 0 3rem;
+        border-radius: 2rem;
+        width: auto;
+        background-color: $c-white;
+    }
+}
+
+
+
+// Contetn with data bout movie
+.content {
+    padding: .5rem 1rem 0 1rem;
+    height: 100%;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: normal;
+    margin-left: 1rem;
+}
+
+// Actions buttons 
+.actions {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    
+    &__movie {
+        width: 70%;
+    }
+
+    &__about {
+        width: 100%;
+    }
+}
+
+// Paragraph
+.text {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 0 3rem;
+    font-weight: 300;
+}
+
+// Screen
+.screen {
+    margin-top: 3rem;
+    
+    &__text {
+        text-align: center;
+        font-size: 1.4rem;
+        transform: translateY(2rem);
+        letter-spacing: .1rem;
+    }
+
+    &__img {
+        margin: 0 auto;
+        display: block;
+    }
+}
