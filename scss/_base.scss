@@ -37,21 +37,35 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    transition: all .2s;
 
     &__movie {
-        display: none;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
     }
     
     &__about {
-        
         .actions {
             display: flex;
             position: relative;
         }
-        display: none;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
     }
-
+    
     &__book {
-        
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
     }
+}
+
+
+.active {
+    display: block;
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
 }
