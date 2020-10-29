@@ -23,6 +23,10 @@ body {
   width: 50rem;
   margin: 5rem auto;
   position: relative; }
+  @media only screen and (max-width: 500px) {
+    .container {
+      margin: 0;
+      width: 100%; } }
 
 .page {
   border-radius: 3rem;
@@ -32,6 +36,9 @@ body {
   top: 0;
   left: 0;
   transition: all .2s; }
+  @media only screen and (max-width: 500px) {
+    .page {
+      border-radius: 0; } }
   .page__movie {
     transform: translateX(-50%);
     visibility: hidden;
@@ -80,6 +87,7 @@ body {
   .header__img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover; }
   .header__text {
     background: rgba(255, 255, 255, 0.8);
@@ -94,12 +102,12 @@ body {
     top: 1rem;
     right: 1rem;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(206, 72, 113, 0.7);
     border-radius: 50%;
     height: 7rem;
     width: 7rem;
     text-decoration: none;
-    color: #4C5F6F;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,7 +248,10 @@ body {
     padding: 0 3rem;
     border-radius: 2rem;
     width: auto;
-    background-color: #fff; }
+    background-color: #fff;
+    font-size: 2rem;
+    color: #4C5F6F;
+    font-weight: 300; }
 
 .content {
   padding: .5rem 1rem 0 1rem;

@@ -25,14 +25,16 @@
     &__second {
         width: 100%;
         height: 35rem;
-
+        // if want to object fit be contain
+        // background: linear-gradient(45deg, $c-pink, $c-dark);
         position: relative;
     }
 
     &__img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
 
     &__text {
@@ -50,12 +52,12 @@
         top: 1rem;
         right: 1rem;
         padding: 1rem;
-        background-color: rgba($c-white, .9);
+        background-color: rgba($c-pink, .7);
         border-radius: 50%;
         height: 7rem;
         width: 7rem;
         text-decoration: none;
-        color: $c-dark;
+        color: $c-white;
         display: flex;
         align-items: center;
         justify-content: center;
