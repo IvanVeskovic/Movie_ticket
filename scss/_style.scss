@@ -117,10 +117,15 @@
     }
 
     &__seat {
-        width: 4rem;
+        width: 9%;
         height: 5rem;
         fill: $c-dark;
         cursor: pointer;
+
+        @media only screen and (max-width: 400px) {
+            height: 3.5rem;
+            width: 9%;
+        }
 
         &:nth-child(2){
             margin-right: auto;
@@ -151,6 +156,10 @@
     display: flex;
     background-color: $c-pink;
     font-size: 2rem;
+
+    @media only screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 
     &__order,
     &__value {

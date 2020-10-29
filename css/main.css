@@ -38,7 +38,8 @@ body {
   transition: all .2s; }
   @media only screen and (max-width: 500px) {
     .page {
-      border-radius: 0; } }
+      border-radius: 0;
+      width: 100%; } }
   .page__movie {
     transform: translateX(-50%);
     visibility: hidden;
@@ -152,10 +153,14 @@ body {
   padding: .2rem 1rem; }
 
 .seats__seat {
-  width: 4rem;
+  width: 9%;
   height: 5rem;
   fill: #4C5F6F;
   cursor: pointer; }
+  @media only screen and (max-width: 400px) {
+    .seats__seat {
+      height: 3.5rem;
+      width: 9%; } }
   .seats__seat:nth-child(2) {
     margin-right: auto; }
   .seats__seat:nth-child(8) {
@@ -172,6 +177,9 @@ body {
   display: flex;
   background-color: #CE4871;
   font-size: 2rem; }
+  @media only screen and (max-width: 500px) {
+    .footer {
+      font-size: 1.5rem; } }
   .footer__order, .footer__value {
     color: #fff;
     text-transform: uppercase;
@@ -186,24 +194,30 @@ body {
   border-radius: 2rem;
   overflow: hidden;
   background-color: #ECF3ED;
-  height: 17rem;
+  min-height: 17rem;
   position: relative;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
   transition: all .5s ease;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(min-content, max-content); }
   .movie:hover {
     transform: scale(1.03);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25); }
   .movie:not(:first-of-type) {
     margin: 2rem 0; }
   .movie__img {
-    width: 30%;
     -o-object-fit: cover;
     object-fit: cover;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: block;
+    width: 100%;
+    height: 100%; }
   .movie__price {
     position: absolute;
     right: 1rem;
@@ -217,10 +231,17 @@ body {
     font-size: 1.8rem;
     color: #CE4871;
     border-radius: 50%; }
+    @media only screen and (max-width: 500px) {
+      .movie__price {
+        left: .5rem;
+        top: .5rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.2rem; } }
 
 .btn {
   padding: 1rem;
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +272,14 @@ body {
     background-color: #fff;
     font-size: 2rem;
     color: #4C5F6F;
-    font-weight: 300; }
+    font-weight: 300;
+    text-align: center; }
+    @media only screen and (max-width: 500px) {
+      .btn__footer {
+        font-size: 1.5rem; } }
+    .btn__footer:hover {
+      background-color: #a03d5b;
+      color: #fff; }
 
 .content {
   padding: .5rem 1rem 0 1rem;
@@ -259,17 +287,19 @@ body {
   width: 100%;
   font-size: 1.4rem;
   line-height: normal;
-  margin-left: 1rem; }
+  margin-left: 1rem;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2; }
 
 .actions {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  width: 100%;
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
   .actions__movie {
-    width: 70%; }
+    width: 100%; }
   .actions__about {
     width: 100%; }
 
@@ -289,7 +319,8 @@ body {
     color: #93A4AB; }
   .screen__img {
     margin: 0 auto;
-    display: block; }
+    display: block;
+    width: 90%; }
 
 .heading {
   font-family: "Playball", cursive;
@@ -300,10 +331,17 @@ body {
   .heading__main {
     font-size: 5.5rem;
     line-height: 6rem; }
+    @media only screen and (max-width: 500px) {
+      .heading__main {
+        font-size: 4rem;
+        line-height: 5rem; } }
   .heading__second {
     font-size: 3rem;
     text-align: center;
     text-align: left; }
+    @media only screen and (max-width: 500px) {
+      .heading__second {
+        font-size: 2rem; } }
   .heading__third {
     font-size: 2.4rem;
     margin-bottom: .5rem;

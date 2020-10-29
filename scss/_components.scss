@@ -3,13 +3,19 @@
     border-radius: 2rem;
     overflow: hidden;
     background-color: $c-grey;
-    height: 17rem;
+    min-height: 17rem;
     position: relative;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    display: flex;
+    // display: flex;
     transition: all .5s ease;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+
+
+    // testing
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
 
     &:hover {
         transform: scale(1.03);
@@ -22,11 +28,17 @@
 
 
     &__img {
-        width: 30%;
         -o-object-fit: cover;
            object-fit: cover;
         -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
+
+        // test
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     &__price {
@@ -42,6 +54,14 @@
         font-size: 1.8rem;
         color: $c-pink;
         border-radius: 50%;
+
+        @media only screen and (max-width: 500px) {
+            left: .5rem;   
+            top: .5rem;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -49,7 +69,7 @@
 
 .btn {
     padding: 1rem;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +111,16 @@
         font-size: 2rem;
         color: $c-dark;
         font-weight: 300;
+        text-align: center;
+
+        @media only screen and (max-width: 500px) {
+            font-size: 1.5rem;
+        }
+        
+        &:hover {
+            background-color: $c-pink-dark;
+            color: $c-white;
+        }
     }
 
     
@@ -106,19 +136,24 @@
     font-size: 1.4rem;
     line-height: normal;
     margin-left: 1rem;
+
+    // Test
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
 }
 
 // Actions buttons 
 .actions {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
     margin-top: 2rem;
+    width: 100%;
+    // Test
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     
     &__movie {
-        width: 70%;
+        width: 100%;
     }
 
     &__about {
@@ -149,5 +184,6 @@
     &__img {
         margin: 0 auto;
         display: block;
+        width: 90%;
     }
 }

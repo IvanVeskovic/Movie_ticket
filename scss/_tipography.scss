@@ -12,12 +12,21 @@
     &__main {
         font-size: 5.5rem;
         line-height: 6rem;
+
+        @media only screen and (max-width: 500px) {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
     }
 
     &__second {
         font-size: 3rem;
         text-align: center;
         text-align: left;
+
+        @media only screen and (max-width: 500px) {
+            font-size: 2rem;
+        }
     }
 
     &__third {
